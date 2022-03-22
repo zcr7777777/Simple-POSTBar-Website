@@ -1,0 +1,12 @@
+x { background-color: linen; color: rgb(106, 90, 205); border-radius: 4px; }
+input[type=text] { border: 2px solid green; border-radius: 4px; width: 70px; padding: 4px 6px; margin: 8px 0; box-sizing: border-box; }
+ul { list-style-type: none; margin: 0; padding: 0; width: 100px; background-color: #f1f1f1; position: fixed; height: 100%; overflow: auto; }
+li a { list-style-type: none; display: block; color: white; padding: 8px 16px; text-decoration: none; background-color: blue; border-radius: 4px; }
+li a:hover { background-color: #555; color: white; }
+.btn { display: inline-block; border-radius: 4px; background-color: #f4511e; border: none; color: #FFFFFF; text-align: center; font-size: 20px; padding: 8px; width: 120px; transition: all 0.5s; cursor: pointer; margin: 5px; }
+.btn span { cursor: pointer; display: inline-block; position: relative; transition: 0.5s; }
+.btn span:after { content: '\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s; }
+.btn:hover span { padding-right: 25px; }
+.btn:hover span:after { opacity: 1; right: 0; }
+.lefth { margin-left: 100px; padding: 1px 16px; height: 100%; }
+.ifr { position: absolute; width: 99%; height: 100px; bottom: 0; text-align: center; }
