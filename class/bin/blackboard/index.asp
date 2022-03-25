@@ -60,7 +60,6 @@ sql="select * from blackboard"
 rs.CursorLocation=3
 rs.open sql,conn,1,3
 rscnt=rs.recordcount
-response.cookies("cid")=rscnt+1
 if rscnt=0 then
 response.write("没有条目")
 else
@@ -86,6 +85,9 @@ resp=rs(2)
 response.write("<br><b>帖子正文:</b><table><tr><td style='word-break:break-all'>"&resp&"</td></tr></table>")
 response.write("<hr>")
 rs.moveprevious
+if i=0 then
+response.cookies("cid")=tid+1
+end if
 next
 unsigned=rs(1)
 tuid=rs(0)
