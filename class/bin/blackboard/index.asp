@@ -62,6 +62,7 @@ rs.open sql,conn,1,3
 rscnt=rs.recordcount
 if rscnt=0 then
 response.write("没有条目")
+response.cookies("cid")=1
 else
 rs.movelast
 for i=0 to rscnt-2
