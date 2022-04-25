@@ -11,7 +11,7 @@
   <li><a href="/"><b>在线选课</b></a></li>
 </ul>
 <div class="lefth">
-<form action="./createservice.asp" method="post" accept-charset="utf-8">
+<form action="./createservice.asp" method="post" accept-charset="ISO-8859-1">
 <x>
 请选择是否匿名：
 </x>
