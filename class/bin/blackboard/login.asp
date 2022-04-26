@@ -4,7 +4,7 @@ response.charset="utf-8"
 hide=Request.QueryString("hide")
 err=Request.QueryString("err")
 if err=1 then
-response.write("<script>alert('密码不得为空')</script>")
+response.write("<script>alert('请检查密码和邮箱是否为空，或确认密码不匹配')</script>")
 end if
 from=Request.QueryString("from")
 if from="logout" then
@@ -59,9 +59,9 @@ conn.Open "signclass"
 sql="select pwd from bregister where uid='"&requid&"'"
 rs.open sql,conn,1,3
 if rs.eof or rs.bof then
-response.write("<x><b><h3>注册</h3></b></x><br><x>此用户名尚未注册，输入密码以完成注册</x><form action='./register.asp' method= 'post ' accept-charset= 'utf-8 '><x>密码:</x><input type= 'text ' name= 'reqpwd'><br><x>邮箱:</x><input type= 'text ' name= 'mailname'><br><button class= 'btn ' style= 'vertical-align:middle'><span>注册</span></button></form>")
+response.write("<x><b><h3>注册</h3></b></x><br><x>此用户名尚未注册，输入密码以完成注册</x><form action='./register.asp' method= 'post ' accept-charset= 'utf-8 '><x>密码:</x><input type= 'password' name= 'reqpwd'><br><x>确认密码:</x><input type= 'password' name= 'cpwd'><br><x>验证邮箱:</x><input type= 'text ' name= 'mailname'><br><button class= 'btn ' style= 'vertical-align:middle'><span>注册</span></button></form>")
 else
-response.write("<x><b><h3>登录</h3></b></x><br><x>此用户名已注册，输入密码完成登录</x><br><form action='./loginservice.asp' method= 'post ' accept-charset= 'utf-8 '><x>密码:</x><input type= 'text ' name= 'reqpwd'><br><button class= 'btn ' style= 'vertical-align:middle'><span>登录</span></button></form><br><x>或者：</x><a href=./login.asp><x>[注册]</x></a><x>另一个账号→</x>")
+response.write("<x><b><h3>登录</h3></b></x><br><x>此用户名已注册，输入密码完成登录</x><br><form action='./loginservice.asp' method= 'post ' accept-charset= 'utf-8 '><x>密码:</x><input type= 'password' name= 'reqpwd'><br><button class= 'btn ' style= 'vertical-align:middle'><span>登录</span></button></form><br><x>或者：</x><a href=./login.asp><x>[注册]</x></a><x>另一个账号→</x>")
 end if
 conn.close
 set conn=nothing
