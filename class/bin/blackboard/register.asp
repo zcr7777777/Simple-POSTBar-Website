@@ -33,9 +33,7 @@ conna.Open "signclass"
 sqla="select pwd from bregister where mailname='"&mailtoname&"'"
 rsa.open sqla,conna,1,3
 if rsa.eof or rsa.bof then
-mlen=len(mailtoname)
-nlen=mlen^3
-vcode=mlen+nlen+5
+mlen=验证加密算法
  Set myMail=CreateObject("CDO.Message")
  myMail.Subject="Verification Mail"
  myMail.From="发件邮箱"
